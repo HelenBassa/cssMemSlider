@@ -18,6 +18,7 @@ p {
   color: #c5f9e2;
   font-family: "Raleway", sans-serif;
   margin: 3px 0;
+  font-weight: 600;
 }
 
 .wrapper {
@@ -137,10 +138,12 @@ p {
   order: -1;
   opacity: 1;
   flex: 0 0 auto;
-  transition: opacity 0.5s;
+  transform: translateX(0);
+  transition: opacity 1s, transform 1s;
 }
 
 .label {
   opacity: 0;
+  transform: translateX(20px);
 }
 /* Description - END */
