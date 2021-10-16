@@ -17,7 +17,7 @@ h1 {
 p {
   color: #c5f9e2;
   font-family: "Raleway", sans-serif;
-  margin: 0;
+  margin: 3px 0;
 }
 
 .wrapper {
@@ -55,8 +55,7 @@ p {
 }
 
 .image-slide,
-.fake-radio,
-.radio-btn {
+.fake-radio {
   transition: all 0.5s ease-out;
 }
 
@@ -117,6 +116,16 @@ p {
   border-radius: 50%;
   background: #c5f9e2;
   cursor: pointer;
+  transition: all 0.35s ease-out;
+}
+
+.radio-btn:hover {
+  background: #6fc29d;
+  transform: scale(1.1);
+}
+
+.radio-btn:active {
+  background: #f26637;
 }
 /* Color of bullets - END */
 
