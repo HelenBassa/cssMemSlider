@@ -183,6 +183,7 @@ p {
 
 .radio-btn:active {
   background: #f26637;
+  transform: scale(0.9);
 }
 /* Color of bullets - END */
 
