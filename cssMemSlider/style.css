@@ -12,6 +12,7 @@ h1 {
   color: #f26637;
   font-family: "Luckiest Guy", cursive;
   letter-spacing: 2px;
+  text-align: center;
 }
 
 p {
@@ -19,6 +20,26 @@ p {
   font-family: "Raleway", sans-serif;
   margin: 3px 0;
   font-weight: 600;
+}
+
+@media screen and (min-width: 426px) and (max-width: 768px) {
+  p {
+    color: #c5f9e2;
+    font-family: "Raleway", sans-serif;
+    margin: 3px 0;
+    font-weight: 600;
+    font-size: 0.8em;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  p {
+    color: #c5f9e2;
+    font-family: "Raleway", sans-serif;
+    margin: 3px 0;
+    font-weight: 600;
+    font-size: 0.6em;
+  }
 }
 
 .wrapper {
@@ -55,6 +76,15 @@ p {
   flex: 0 0 auto;
 }
 
+@media screen and (max-width: 768px) {
+  .fake-radio {
+    display: flex;
+    gap: 5px;
+    flex: 0 0 auto;
+    justify-content: center;
+  }
+}
+
 .image-slide,
 .fake-radio {
   transition: all 0.5s ease-out;
@@ -73,6 +103,16 @@ p {
 .controls {
   display: flex;
   justify-content: space-between;
+  gap: 10px;
+  transition: all 0.5s ease-out;
+}
+
+@media screen and (max-width: 768px) {
+  .controls {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column-reverse;
+  }
 }
 
 .radio {
