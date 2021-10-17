@@ -11,14 +11,14 @@ body {
 h1 {
   color: #f26637;
   font-family: "Luckiest Guy", cursive;
-  letter-spacing: 2px;
+  letter-spacing: 0.125em;
   text-align: center;
 }
 
 p {
   color: #c5f9e2;
   font-family: "Raleway", sans-serif;
-  margin: 3px 0;
+  margin: 0.1875em 0;
   font-weight: 600;
 }
 
@@ -26,7 +26,7 @@ p {
   p {
     color: #c5f9e2;
     font-family: "Raleway", sans-serif;
-    margin: 3px 0;
+    margin: 0.1875em 0;
     font-weight: 600;
     font-size: 0.8em;
   }
@@ -36,7 +36,7 @@ p {
   p {
     color: #c5f9e2;
     font-family: "Raleway", sans-serif;
-    margin: 3px 0;
+    margin: 0.1875em 0;
     font-weight: 600;
     font-size: 0.6em;
   }
@@ -44,15 +44,15 @@ p {
 
 .wrapper {
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 1.25em;
 }
 
 .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 20px;
-  max-width: 600px;
+  gap: 1.25em;
+  max-width: 37.5em;
 }
 
 .images {
@@ -72,14 +72,14 @@ p {
 
 .fake-radio {
   display: flex;
-  gap: 5px;
+  gap: 0.3125em;
   flex: 0 0 auto;
 }
 
 @media screen and (max-width: 768px) {
   .fake-radio {
     display: flex;
-    gap: 5px;
+    gap: 0.3125em;
     flex: 0 0 auto;
     justify-content: center;
   }
@@ -97,13 +97,13 @@ p {
 
 .image img {
   width: 100%;
-  border-radius: 8px;
+  border-radius: 0.5em;
 }
 
 .controls {
   display: flex;
   justify-content: space-between;
-  gap: 10px;
+  gap: 0.625em;
   transition: all 0.5s ease-out;
 }
 
@@ -167,9 +167,9 @@ p {
 
 .radio-btn {
   display: flex;
-  width: 15px;
-  height: 15px;
-  border: 5px solid #0e426f;
+  width: 1em;
+  height: 1em;
+  border: 0.5em solid #0e426f;
   border-radius: 50%;
   background: #c5f9e2;
   cursor: pointer;
@@ -205,6 +205,6 @@ p {
 
 .label {
   opacity: 0;
-  transform: translateX(20px);
+  transform: translateX(1.25em);
 }
 /* Description - END */
