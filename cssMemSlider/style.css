@@ -1,0 +1,210 @@
+@import "normalize.css";
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #0e426f;
+}
+
+h1 {
+  color: #f26637;
+  font-family: "Luckiest Guy", cursive;
+  letter-spacing: 0.125em;
+  text-align: center;
+}
+
+p {
+  color: #c5f9e2;
+  font-family: "Raleway", sans-serif;
+  margin: 0.1875em 0;
+  font-weight: 600;
+}
+
+@media screen and (min-width: 426px) and (max-width: 768px) {
+  p {
+    color: #c5f9e2;
+    font-family: "Raleway", sans-serif;
+    margin: 0.1875em 0;
+    font-weight: 600;
+    font-size: 0.8em;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  p {
+    color: #c5f9e2;
+    font-family: "Raleway", sans-serif;
+    margin: 0.1875em 0;
+    font-weight: 600;
+    font-size: 0.6em;
+  }
+}
+
+.wrapper {
+  margin: 0 auto;
+  padding: 0 1.25em;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.25em;
+  max-width: 37.5em;
+}
+
+.images {
+  overflow: hidden;
+  width: 100%;
+}
+
+.images-inner {
+  width: 1000%;
+  transition: all 800ms cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.image-slide {
+  width: 10%;
+  float: left;
+}
+
+.fake-radio {
+  display: flex;
+  gap: 0.3125em;
+  flex: 0 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+  .fake-radio {
+    display: flex;
+    gap: 0.3125em;
+    flex: 0 0 auto;
+    justify-content: center;
+  }
+}
+
+.image-slide,
+.fake-radio {
+  transition: all 0.5s ease-out;
+}
+
+.image {
+  display: flex;
+  margin: 0 auto;
+}
+
+.image img {
+  width: 100%;
+  border-radius: 0.5em;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.625em;
+  transition: all 0.5s ease-out;
+}
+
+@media screen and (max-width: 768px) {
+  .controls {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column-reverse;
+  }
+}
+
+.radio {
+  display: none;
+}
+
+.labels {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Move slides */
+#slide1:checked ~ .images .images-inner {
+  margin-left: 0;
+}
+
+#slide2:checked ~ .images .images-inner {
+  margin-left: -100%;
+}
+
+#slide3:checked ~ .images .images-inner {
+  margin-left: -200%;
+}
+
+#slide4:checked ~ .images .images-inner {
+  margin-left: -300%;
+}
+#slide5:checked ~ .images .images-inner {
+  margin-left: -400%;
+}
+#slide6:checked ~ .images .images-inner {
+  margin-left: -500%;
+}
+#slide7:checked ~ .images .images-inner {
+  margin-left: -600%;
+}
+#slide8:checked ~ .images .images-inner {
+  margin-left: -700%;
+}
+
+/* Color of bullets */
+#slide1:checked ~ .controls .fake-radio .radio-btn:nth-child(1),
+#slide2:checked ~ .controls .fake-radio .radio-btn:nth-child(2),
+#slide3:checked ~ .controls .fake-radio .radio-btn:nth-child(3),
+#slide4:checked ~ .controls .fake-radio .radio-btn:nth-child(4),
+#slide5:checked ~ .controls .fake-radio .radio-btn:nth-child(5),
+#slide6:checked ~ .controls .fake-radio .radio-btn:nth-child(6),
+#slide7:checked ~ .controls .fake-radio .radio-btn:nth-child(7),
+#slide8:checked ~ .controls .fake-radio .radio-btn:nth-child(8) {
+  background: #f26637;
+}
+
+.radio-btn {
+  display: flex;
+  width: 1em;
+  height: 1em;
+  border: 0.5em solid #0e426f;
+  border-radius: 50%;
+  background: #c5f9e2;
+  cursor: pointer;
+  transition: all 0.35s ease-out;
+}
+
+.radio-btn:hover {
+  background: #6fc29d;
+  transform: scale(1.1);
+}
+
+.radio-btn:active {
+  background: #f26637;
+  transform: scale(0.9);
+}
+/* Color of bullets - END */
+
+/* Description animation*/
+#slide1:checked ~ .controls .labels .label:nth-child(1),
+#slide2:checked ~ .controls .labels .label:nth-child(2),
+#slide3:checked ~ .controls .labels .label:nth-child(3),
+#slide4:checked ~ .controls .labels .label:nth-child(4),
+#slide5:checked ~ .controls .labels .label:nth-child(5),
+#slide6:checked ~ .controls .labels .label:nth-child(6),
+#slide7:checked ~ .controls .labels .label:nth-child(7),
+#slide8:checked ~ .controls .labels .label:nth-child(8) {
+  order: -1;
+  opacity: 1;
+  flex: 0 0 auto;
+  transform: translateX(0);
+  transition: opacity 1s, transform 1s;
+}
+
+.label {
+  opacity: 0;
+  transform: translateX(1.25em);
+}
+/* Description - END */
